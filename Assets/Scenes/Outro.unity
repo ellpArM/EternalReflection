@@ -284,16 +284,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3706735450467582804, guid: c57bd296930c9a843b59d87996d6f5e5, type: 3}
-      propertyPath: fade
-      value: 
-      objectReference: {fileID: 6227667194394840413, guid: 89d9d91462bb4724a8c620be62f3903c, type: 3}
-    - target: {fileID: 3706735450467582804, guid: c57bd296930c9a843b59d87996d6f5e5, type: 3}
       propertyPath: dialogueLines.Array.size
       value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 3706735450467582804, guid: c57bd296930c9a843b59d87996d6f5e5, type: 3}
       propertyPath: pixelArtSprites.Array.size
-      value: 15
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 3706735450467582804, guid: c57bd296930c9a843b59d87996d6f5e5, type: 3}
       propertyPath: dialogueLines.Array.data[0]
@@ -309,7 +305,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3706735450467582804, guid: c57bd296930c9a843b59d87996d6f5e5, type: 3}
       propertyPath: dialogueLines.Array.data[3]
-      value: I made your favorite today!
+      value: I made your favortive today!
       objectReference: {fileID: 0}
     - target: {fileID: 3706735450467582804, guid: c57bd296930c9a843b59d87996d6f5e5, type: 3}
       propertyPath: dialogueLines.Array.data[4]
@@ -407,14 +403,6 @@ PrefabInstance:
       propertyPath: pixelArtSprites.Array.data[13]
       value: 
       objectReference: {fileID: 21300000, guid: ba31ceb17a757304db83f6d58faf55b9, type: 3}
-    - target: {fileID: 3706735450467582804, guid: c57bd296930c9a843b59d87996d6f5e5, type: 3}
-      propertyPath: pixelArtSprites.Array.data[14]
-      value: 
-      objectReference: {fileID: 21300000, guid: b48f29498036b644187ee224395f90a7, type: 3}
-    - target: {fileID: 6249640108560289212, guid: c57bd296930c9a843b59d87996d6f5e5, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: b48f29498036b644187ee224395f90a7, type: 3}
     - target: {fileID: 6545054300794257450, guid: c57bd296930c9a843b59d87996d6f5e5, type: 3}
       propertyPath: m_Name
       value: LoseDialogue
@@ -476,8 +464,8 @@ Camera:
   m_GameObject: {fileID: 741798941}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 2
-  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -625,12 +613,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 1
+  m_UiScaleMode: 0
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0.186
+  m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
