@@ -108,7 +108,7 @@ public class DialogueManager : MonoBehaviour
             if(isStarter == false)
             {
                 if (losing == false)
-                { NextScene(); }
+                { StartCoroutine(ender()); }
                 else
                 {
                     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
@@ -129,6 +129,14 @@ public class DialogueManager : MonoBehaviour
     {
         yield return new WaitForSeconds(2.5f);
         Instantiate(thing, this.transform.parent.transform);
+        Destroy(gameObject);
+    }
+    IEnumerator ender()
+    {
+        Instantiate(fade, this.transform.parent.transform);
+        yield return new WaitForSeconds(1.5f);
+        
+        NextScene();
         Destroy(gameObject);
     }
 }
