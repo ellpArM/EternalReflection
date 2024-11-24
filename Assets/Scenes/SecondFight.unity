@@ -218,7 +218,7 @@ Animator:
   m_GameObject: {fileID: 151200733}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 584d5398ae8f1d541a466239c04b59cf, type: 2}
+  m_Controller: {fileID: 9100000, guid: bc33831b3a0a637408edfa8acb8d24fc, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -53757,8 +53757,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bedc7d307791d9748bf41760772178f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
-  maxHealth: 100
+  health: 150
+  maxHealth: 150
   healthBar: {fileID: 240818646}
 --- !u!1 &1477125145
 GameObject:

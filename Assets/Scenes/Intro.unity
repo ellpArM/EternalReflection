@@ -284,12 +284,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3706735450467582804, guid: c57bd296930c9a843b59d87996d6f5e5, type: 3}
+      propertyPath: fade
+      value: 
+      objectReference: {fileID: 6227667194394840413, guid: 89d9d91462bb4724a8c620be62f3903c, type: 3}
+    - target: {fileID: 3706735450467582804, guid: c57bd296930c9a843b59d87996d6f5e5, type: 3}
       propertyPath: dialogueLines.Array.size
       value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 3706735450467582804, guid: c57bd296930c9a843b59d87996d6f5e5, type: 3}
       propertyPath: pixelArtSprites.Array.size
-      value: 14
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 3706735450467582804, guid: c57bd296930c9a843b59d87996d6f5e5, type: 3}
       propertyPath: dialogueLines.Array.data[0]
@@ -305,7 +309,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3706735450467582804, guid: c57bd296930c9a843b59d87996d6f5e5, type: 3}
       propertyPath: dialogueLines.Array.data[3]
-      value: I made your favortive today!
+      value: I made your favorite today!
       objectReference: {fileID: 0}
     - target: {fileID: 3706735450467582804, guid: c57bd296930c9a843b59d87996d6f5e5, type: 3}
       propertyPath: dialogueLines.Array.data[4]
@@ -401,6 +405,10 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 42343bbeb2b8e6543b01273ec014565c, type: 3}
     - target: {fileID: 3706735450467582804, guid: c57bd296930c9a843b59d87996d6f5e5, type: 3}
       propertyPath: pixelArtSprites.Array.data[13]
+      value: 
+      objectReference: {fileID: 21300000, guid: ba31ceb17a757304db83f6d58faf55b9, type: 3}
+    - target: {fileID: 3706735450467582804, guid: c57bd296930c9a843b59d87996d6f5e5, type: 3}
+      propertyPath: pixelArtSprites.Array.data[14]
       value: 
       objectReference: {fileID: 21300000, guid: ba31ceb17a757304db83f6d58faf55b9, type: 3}
     - target: {fileID: 6545054300794257450, guid: c57bd296930c9a843b59d87996d6f5e5, type: 3}
