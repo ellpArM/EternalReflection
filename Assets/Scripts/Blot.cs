@@ -1,63 +1,85 @@
-/*using System;
-using System.IO.Ports;
 using UnityEngine;
+using System.IO.Ports;
+using System.Threading;
+using System;
 
-public class CNCSender : MonoBehaviour
+public class Blot : MonoBehaviour
 {
-    public string portName = "/dev/tty.usbmodem101"; // Replace with your CNC machine's COM port
-    public int baudRate = 115200; // Baud rate for CNC machine
+    public string letter; // Letter to be written
     private SerialPort serialPort;
-    private float moveDistance = 10f; // Movement distance for each key press
+    private Thread serialThread;
+    private bool isRunning;
+
+    void Start()
+    {
+        // Initialize SerialPort
+        serialPort = new SerialPort("/dev/tty.usbmodem101", 9600);
+        serialPort.ReadTimeout = 500; // Set read timeout for non-blocking
+
+        // Start the serial communication in a new thread
+        isRunning = true;
+        serialThread = new Thread(SerialThread);
+        serialThread.Start();
+    }
 
     void Update()
     {
-        // Listen for key presses (WASD) and move the CNC machine accordingly
-        if (Input.GetKeyDown(KeyCode.W)) SendGCode(0, moveDistance); // Move up
-        if (Input.GetKeyDown(KeyCode.A)) SendGCode(-moveDistance, 0); // Move left
-        if (Input.GetKeyDown(KeyCode.S)) SendGCode(0, -moveDistance); // Move down
-        if (Input.GetKeyDown(KeyCode.D)) SendGCode(moveDistance, 0); // Move right
+        // Example of sending G-code commands
+        if (serialPort.IsOpen)
+        {
+            serialPort.WriteLine("M4 S0");
+            serialPort.WriteLine("G1 X0 Y0");
+            serialPort.WriteLine("G1 X5 Y10");
+            serialPort.WriteLine("G1 X10 Y0");
+            serialPort.WriteLine("G1 X2.5 Y5");
+            serialPort.WriteLine("G1 X7.5 Y5");
+        }
     }
 
-    // Function to generate and send the G-code based on movement
-    void SendGCode(float moveX, float moveY)
-    {
-        string gcode = GenerateGCode(moveX, moveY);
-        SendGCodeToCNC(gcode);
-    }
-
-    // Function to create the G-code string
-    string GenerateGCode(float moveX, float moveY)
-    {
-        // Start G-code with some basic setup
-        string gcode = "G21 ; Set units to millimeters\n";  // Set units to mm
-        gcode += "G90 ; Use absolute positioning\n"; // Absolute positioning
-
-        // Add movement instruction (G0 for rapid move)
-        gcode += $"G0 X{moveX} Y{moveY} Z0.00 ; Move to X{moveX} Y{moveY} Z0.00\n";
-
-        return gcode;
-    }
-
-    // Function to send the G-code to the CNC machine via serial port
-    void SendGCodeToCNC(string gcode)
+    void SerialThread()
     {
         try
         {
-            // Open serial port if it's not already open
-            if (serialPort == null)
-            {
-                serialPort = new SerialPort(portName, baudRate);
-                serialPort.Open();
-            }
+            // Open the serial port
+            serialPort.Open();
+            Debug.Log("Serial Port Opened");
 
-            // Send the generated G-code
-            serialPort.WriteLine(gcode);
-            Debug.Log($"Sent: {gcode}");
+            // Read any available response
+            while (isRunning && serialPort.IsOpen)
+            {
+                try
+                {
+                    string response = serialPort.ReadLine();
+                    Debug.Log(response); // Output the response from CNC
+                }
+                catch (TimeoutException)
+                {
+                    // Ignore timeouts and continue reading
+                }
+            }
         }
         catch (Exception e)
         {
-            Debug.LogError($"Error sending G-code: {e.Message}");
+            Debug.LogError("Error in Serial Communication: " + e.Message);
+        }
+        finally
+        {
+            // Close the serial port safely
+            if (serialPort.IsOpen)
+            {
+                serialPort.Close();
+                Debug.Log("Serial Port Closed");
+            }
+        }
+    }
+
+    void OnApplicationQuit()
+    {
+        // Ensure the serial thread is stopped when the application quits
+        isRunning = false;
+        if (serialThread != null && serialThread.IsAlive)
+        {
+            serialThread.Join();
         }
     }
 }
-*/
