@@ -53561,7 +53561,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 5525999686919405301, guid: f7f1122c6302ecf458889cdcd2d38323, type: 3}
   bulletparent: {fileID: 1550143511}
   firePoint: {fileID: 1015031793}
-  shootCooldown: 2
+  shootCooldown: 0.5
 --- !u!114 &1409027636
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53578,7 +53578,6 @@ MonoBehaviour:
   dashSpeed: 20
   rb: {fileID: 1409027638}
   cam: {fileID: 519420031}
-  dashed: 0
   pic: {fileID: 949654888}
   anim: {fileID: 949654891}
 --- !u!61 &1409027637
