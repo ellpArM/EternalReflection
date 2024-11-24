@@ -21,7 +21,7 @@ public class PlayerMovement : MonoBehaviour
 
         // Get mouse position in world space
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
-        cam.gameObject.transform.position = new Vector3(transform.position.x, transform.position.y, -10f);
+        //cam.gameObject.transform.position = new Vector3(transform.position.x, transform.position.y, -10f);
     }
 
     void FixedUpdate()
