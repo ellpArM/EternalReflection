@@ -27,7 +27,7 @@ public class BulletBehaviour : MonoBehaviour
             // Change color to red after the first bounce
             if (bounceCount == 1)
             {
-                spriteRenderer.color = Color.red;
+                spriteRenderer.color = Color.white;
                 gameObject.tag = "EnemyBullet";
             }
         }
