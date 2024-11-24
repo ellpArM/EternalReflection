@@ -30,6 +30,11 @@ public class BulletBehaviour : MonoBehaviour
                 spriteRenderer.color = Color.white;
                 gameObject.tag = "EnemyBullet";
             }
+            if(GameObject.FindGameObjectWithTag("Enemy").GetComponent<EnemyMovement>().demonKinger == true)
+            {
+                int val = Random.Range(1, 5);
+                if(val == 2) { Instantiate(gameObject, transform.position, transform.rotation, transform.parent); }
+            }
         }
         if(gameObject.tag == "EnemyBullet")
         {

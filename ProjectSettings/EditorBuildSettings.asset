@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SecondFight.unity
     guid: 7ae5721284a2c9543aaf70b271c0d55e
+  - enabled: 1
+    path: Assets/Scenes/ThirdFight.unity
+    guid: 4fb7511a2cb7ea5419031797e3db0a03
   m_configObjects: {}
