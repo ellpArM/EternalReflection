@@ -8,6 +8,8 @@ public class EnemyHealth : MonoBehaviour
     public float maxHealth = 100;
 
     [SerializeField] GameObject healthBar;
+    [SerializeField] GameObject pic;
+    [SerializeField] Animator anim;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +24,8 @@ public class EnemyHealth : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        pic.transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -106,7 +107,7 @@ public class DialogueManager : MonoBehaviour
             Debug.Log("End of dialogue.");
             if(isStarter == false)
             {
-                Debug.Log("END");
+                NextScene();
             }
             else
             {
@@ -114,5 +115,9 @@ public class DialogueManager : MonoBehaviour
                 e.SetActive(true);
             }
         }
+    }
+    public void NextScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
