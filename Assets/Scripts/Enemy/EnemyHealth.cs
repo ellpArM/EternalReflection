@@ -18,6 +18,10 @@ public class EnemyHealth : MonoBehaviour
     void Update()
     {
         healthBar.transform.localScale = new Vector3(health / maxHealth, 1f, 1f);
+        if (health <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

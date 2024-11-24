@@ -49,8 +49,10 @@ public class PlayerMovement : MonoBehaviour
     {
         Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("Bullets"), true);
         dashed = true;
+        yield return new WaitForSeconds(0.5f);
+        
+        Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("Bullets"), false);
         yield return new WaitForSeconds(1f);
         dashed = false;
-        Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("Bullets"), false);
     }
 }

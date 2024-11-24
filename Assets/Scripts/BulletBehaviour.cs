@@ -31,5 +31,12 @@ public class BulletBehaviour : MonoBehaviour
                 gameObject.tag = "EnemyBullet";
             }
         }
+        if(gameObject.tag == "EnemyBullet")
+        {
+            if(collision.gameObject.tag == "Bullet")
+            {
+                Destroy(gameObject);
+            }
+        }
     }
 }
