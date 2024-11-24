@@ -284,56 +284,61 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3706735450467582804, guid: c57bd296930c9a843b59d87996d6f5e5, type: 3}
+      propertyPath: fade
+      value: 
+      objectReference: {fileID: 6227667194394840413, guid: 89d9d91462bb4724a8c620be62f3903c, type: 3}
+    - target: {fileID: 3706735450467582804, guid: c57bd296930c9a843b59d87996d6f5e5, type: 3}
       propertyPath: dialogueLines.Array.size
-      value: 14
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 3706735450467582804, guid: c57bd296930c9a843b59d87996d6f5e5, type: 3}
       propertyPath: pixelArtSprites.Array.size
-      value: 14
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 3706735450467582804, guid: c57bd296930c9a843b59d87996d6f5e5, type: 3}
       propertyPath: dialogueLines.Array.data[0]
-      value: WAKEY WAKEY HONEY BUNS!
+      value: You have bested me, I hope you are happy now
       objectReference: {fileID: 0}
     - target: {fileID: 3706735450467582804, guid: c57bd296930c9a843b59d87996d6f5e5, type: 3}
       propertyPath: dialogueLines.Array.data[1]
-      value: time for breakfast!
+      value: You are too quick to judge others, this will haunt you, you just don't
+        know how
       objectReference: {fileID: 0}
     - target: {fileID: 3706735450467582804, guid: c57bd296930c9a843b59d87996d6f5e5, type: 3}
       propertyPath: dialogueLines.Array.data[2]
-      value: You don't want to keep your mother waiting do you?
+      value: Shoot the last shot if you wish, my fate is decided
       objectReference: {fileID: 0}
     - target: {fileID: 3706735450467582804, guid: c57bd296930c9a843b59d87996d6f5e5, type: 3}
       propertyPath: dialogueLines.Array.data[3]
-      value: I made your favortive today!
+      value: My life was long and prosperous I'm even excited
       objectReference: {fileID: 0}
     - target: {fileID: 3706735450467582804, guid: c57bd296930c9a843b59d87996d6f5e5, type: 3}
       propertyPath: dialogueLines.Array.data[4]
-      value: huh? did you forget what day it was?
+      value: Before my end I must defend myself once again
       objectReference: {fileID: 0}
     - target: {fileID: 3706735450467582804, guid: c57bd296930c9a843b59d87996d6f5e5, type: 3}
       propertyPath: dialogueLines.Array.data[5]
-      value: it's your birthday!
+      value: I did not kill your mother.
       objectReference: {fileID: 0}
     - target: {fileID: 3706735450467582804, guid: c57bd296930c9a843b59d87996d6f5e5, type: 3}
       propertyPath: dialogueLines.Array.data[6]
-      value: Once you're done breakfast make sure to clean up.
+      value: ...
       objectReference: {fileID: 0}
     - target: {fileID: 3706735450467582804, guid: c57bd296930c9a843b59d87996d6f5e5, type: 3}
       propertyPath: dialogueLines.Array.data[7]
-      value: I'll head out first, love you!
+      value: ' '
       objectReference: {fileID: 0}
     - target: {fileID: 3706735450467582804, guid: c57bd296930c9a843b59d87996d6f5e5, type: 3}
       propertyPath: dialogueLines.Array.data[8]
-      value: Woah, what's tha-
+      value: no....
       objectReference: {fileID: 0}
     - target: {fileID: 3706735450467582804, guid: c57bd296930c9a843b59d87996d6f5e5, type: 3}
       propertyPath: dialogueLines.Array.data[9]
-      value: are you alright child?
+      value: NOOOOOOOOO
       objectReference: {fileID: 0}
     - target: {fileID: 3706735450467582804, guid: c57bd296930c9a843b59d87996d6f5e5, type: 3}
       propertyPath: dialogueLines.Array.data[10]
-      value: I sense demonic energy from this supernatural event
+      value: NOOOOOOOOOOOOOOOOOOOOOO
       objectReference: {fileID: 0}
     - target: {fileID: 3706735450467582804, guid: c57bd296930c9a843b59d87996d6f5e5, type: 3}
       propertyPath: dialogueLines.Array.data[11]
@@ -350,47 +355,47 @@ PrefabInstance:
     - target: {fileID: 3706735450467582804, guid: c57bd296930c9a843b59d87996d6f5e5, type: 3}
       propertyPath: pixelArtSprites.Array.data[0]
       value: 
-      objectReference: {fileID: 21300000, guid: 433dfa0ab281f004cb8f139d3ef7979d, type: 3}
+      objectReference: {fileID: 21300000, guid: d76a65b1e25dbac4a9b694da0345f7ef, type: 3}
     - target: {fileID: 3706735450467582804, guid: c57bd296930c9a843b59d87996d6f5e5, type: 3}
       propertyPath: pixelArtSprites.Array.data[1]
       value: 
-      objectReference: {fileID: 21300000, guid: 433dfa0ab281f004cb8f139d3ef7979d, type: 3}
+      objectReference: {fileID: 21300000, guid: d76a65b1e25dbac4a9b694da0345f7ef, type: 3}
     - target: {fileID: 3706735450467582804, guid: c57bd296930c9a843b59d87996d6f5e5, type: 3}
       propertyPath: pixelArtSprites.Array.data[2]
       value: 
-      objectReference: {fileID: 21300000, guid: 433dfa0ab281f004cb8f139d3ef7979d, type: 3}
+      objectReference: {fileID: 21300000, guid: d76a65b1e25dbac4a9b694da0345f7ef, type: 3}
     - target: {fileID: 3706735450467582804, guid: c57bd296930c9a843b59d87996d6f5e5, type: 3}
       propertyPath: pixelArtSprites.Array.data[3]
       value: 
-      objectReference: {fileID: 21300000, guid: 97a2761ef2a9d254d97fa2a7300f513d, type: 3}
+      objectReference: {fileID: 21300000, guid: ba31ceb17a757304db83f6d58faf55b9, type: 3}
     - target: {fileID: 3706735450467582804, guid: c57bd296930c9a843b59d87996d6f5e5, type: 3}
       propertyPath: pixelArtSprites.Array.data[4]
       value: 
-      objectReference: {fileID: 21300000, guid: 97a2761ef2a9d254d97fa2a7300f513d, type: 3}
+      objectReference: {fileID: 21300000, guid: f5acc3214e451ec419babc326622c7f4, type: 3}
     - target: {fileID: 3706735450467582804, guid: c57bd296930c9a843b59d87996d6f5e5, type: 3}
       propertyPath: pixelArtSprites.Array.data[5]
       value: 
-      objectReference: {fileID: 21300000, guid: 97a2761ef2a9d254d97fa2a7300f513d, type: 3}
+      objectReference: {fileID: 21300000, guid: f5acc3214e451ec419babc326622c7f4, type: 3}
     - target: {fileID: 3706735450467582804, guid: c57bd296930c9a843b59d87996d6f5e5, type: 3}
       propertyPath: pixelArtSprites.Array.data[6]
       value: 
-      objectReference: {fileID: 21300000, guid: f69fec8fcb44e664aa6ff03dc363899a, type: 3}
+      objectReference: {fileID: 21300000, guid: 5d00e0937d65596439472ecaf8fb6d36, type: 3}
     - target: {fileID: 3706735450467582804, guid: c57bd296930c9a843b59d87996d6f5e5, type: 3}
       propertyPath: pixelArtSprites.Array.data[7]
       value: 
-      objectReference: {fileID: 21300000, guid: f69fec8fcb44e664aa6ff03dc363899a, type: 3}
+      objectReference: {fileID: 21300000, guid: 7fd57c4f3a64b01488a8beac6332b626, type: 3}
     - target: {fileID: 3706735450467582804, guid: c57bd296930c9a843b59d87996d6f5e5, type: 3}
       propertyPath: pixelArtSprites.Array.data[8]
       value: 
-      objectReference: {fileID: 21300000, guid: 7fd57c4f3a64b01488a8beac6332b626, type: 3}
+      objectReference: {fileID: 21300000, guid: 5878984333369714280f764c5a12bfa2, type: 3}
     - target: {fileID: 3706735450467582804, guid: c57bd296930c9a843b59d87996d6f5e5, type: 3}
       propertyPath: pixelArtSprites.Array.data[9]
       value: 
-      objectReference: {fileID: 21300000, guid: 42343bbeb2b8e6543b01273ec014565c, type: 3}
+      objectReference: {fileID: 21300000, guid: 9d6b78de5eaa95c4bae7b33489151c8a, type: 3}
     - target: {fileID: 3706735450467582804, guid: c57bd296930c9a843b59d87996d6f5e5, type: 3}
       propertyPath: pixelArtSprites.Array.data[10]
       value: 
-      objectReference: {fileID: 21300000, guid: 42343bbeb2b8e6543b01273ec014565c, type: 3}
+      objectReference: {fileID: 21300000, guid: 393c573efc9144b4c9f2dc7136f5ca85, type: 3}
     - target: {fileID: 3706735450467582804, guid: c57bd296930c9a843b59d87996d6f5e5, type: 3}
       propertyPath: pixelArtSprites.Array.data[11]
       value: 
@@ -402,7 +407,7 @@ PrefabInstance:
     - target: {fileID: 3706735450467582804, guid: c57bd296930c9a843b59d87996d6f5e5, type: 3}
       propertyPath: pixelArtSprites.Array.data[13]
       value: 
-      objectReference: {fileID: 21300000, guid: ba31ceb17a757304db83f6d58faf55b9, type: 3}
+      objectReference: {fileID: 21300000, guid: 42343bbeb2b8e6543b01273ec014565c, type: 3}
     - target: {fileID: 6545054300794257450, guid: c57bd296930c9a843b59d87996d6f5e5, type: 3}
       propertyPath: m_Name
       value: LoseDialogue
@@ -464,8 +469,8 @@ Camera:
   m_GameObject: {fileID: 741798941}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0

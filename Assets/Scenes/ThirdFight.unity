@@ -54631,11 +54631,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3416297043169607039, guid: e41589e9081257a499e9f7d9748982a8, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -242.75693
+      value: -302
       objectReference: {fileID: 0}
     - target: {fileID: 3416297043169607039, guid: e41589e9081257a499e9f7d9748982a8, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 109.75691
+      value: 143
       objectReference: {fileID: 0}
     - target: {fileID: 3706735450467582804, guid: e41589e9081257a499e9f7d9748982a8, type: 3}
       propertyPath: e
@@ -54648,11 +54648,11 @@ PrefabInstance:
     - target: {fileID: 3706735450467582804, guid: e41589e9081257a499e9f7d9748982a8, type: 3}
       propertyPath: win
       value: 
-      objectReference: {fileID: 6545054300794257450, guid: 008710a3e2d7ece4c9c1f16a39ae8fb1, type: 3}
+      objectReference: {fileID: 6545054300794257450, guid: 85e1ec6977936414caf32671916b5af9, type: 3}
     - target: {fileID: 3706735450467582804, guid: e41589e9081257a499e9f7d9748982a8, type: 3}
       propertyPath: loss
       value: 
-      objectReference: {fileID: 6545054300794257450, guid: 53a3f0aa1b0a24f4a849362bf0f98869, type: 3}
+      objectReference: {fileID: 6545054300794257450, guid: ad435dad754faab48828b9c3368b6dfb, type: 3}
     - target: {fileID: 3706735450467582804, guid: e41589e9081257a499e9f7d9748982a8, type: 3}
       propertyPath: isStarter
       value: 1
@@ -54667,36 +54667,37 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3706735450467582804, guid: e41589e9081257a499e9f7d9748982a8, type: 3}
       propertyPath: dialogueLines.Array.data[0]
-      value: It's the Knight! The Golem alerted me about you
+      value: Hello fellow warrior, I wish to speak to you in peace
       objectReference: {fileID: 0}
     - target: {fileID: 3706735450467582804, guid: e41589e9081257a499e9f7d9748982a8, type: 3}
       propertyPath: dialogueLines.Array.data[1]
-      value: As the golem said, we demons did not kill your mother.
+      value: We understand that the loss of your mother had a large impact on your
+        life
       objectReference: {fileID: 0}
     - target: {fileID: 3706735450467582804, guid: e41589e9081257a499e9f7d9748982a8, type: 3}
       propertyPath: dialogueLines.Array.data[2]
-      value: The demons are not bad people.
+      value: But the demons had no involvement
       objectReference: {fileID: 0}
     - target: {fileID: 3706735450467582804, guid: e41589e9081257a499e9f7d9748982a8, type: 3}
       propertyPath: dialogueLines.Array.data[3]
-      value: I will prove that to you by not attacking you.
+      value: If you must let out your anger, I will allow it.
       objectReference: {fileID: 0}
     - target: {fileID: 3706735450467582804, guid: e41589e9081257a499e9f7d9748982a8, type: 3}
       propertyPath: pixelArtSprites.Array.data[0]
       value: 
-      objectReference: {fileID: 21300000, guid: 938ed4dd5bca78943a8746752d1fdcba, type: 3}
+      objectReference: {fileID: 21300000, guid: ddf007e430049de40b06aef60e5ed68f, type: 3}
     - target: {fileID: 3706735450467582804, guid: e41589e9081257a499e9f7d9748982a8, type: 3}
       propertyPath: pixelArtSprites.Array.data[1]
       value: 
-      objectReference: {fileID: 21300000, guid: 1d6d42b746513ee439284f6591f9f745, type: 3}
+      objectReference: {fileID: 21300000, guid: 10cdfaf9116530a409120b993eea206e, type: 3}
     - target: {fileID: 3706735450467582804, guid: e41589e9081257a499e9f7d9748982a8, type: 3}
       propertyPath: pixelArtSprites.Array.data[2]
       value: 
-      objectReference: {fileID: 21300000, guid: b5ac27b154cbf934e8b70837e78cb21c, type: 3}
+      objectReference: {fileID: 21300000, guid: 85f1d427bdaf98346bb282415f8694f3, type: 3}
     - target: {fileID: 3706735450467582804, guid: e41589e9081257a499e9f7d9748982a8, type: 3}
       propertyPath: pixelArtSprites.Array.data[3]
       value: 
-      objectReference: {fileID: 21300000, guid: 921dcf90b5f59a948bf638185c795f87, type: 3}
+      objectReference: {fileID: 21300000, guid: 85fa692736ee192409b0378f1458b989, type: 3}
     - target: {fileID: 6249640108560289212, guid: e41589e9081257a499e9f7d9748982a8, type: 3}
       propertyPath: m_Color.a
       value: 1
@@ -60814,8 +60815,8 @@ MonoBehaviour:
   player: {fileID: 1409027640}
   maxZ: 0
   minZ: 0
-  moveRangeX: 11
-  moveRangeY: 3.5
+  moveRangeX: 17
+  moveRangeY: 7
   timeToMove: 0.3
   minDistanceToPlayer: 3
   dashSpeed: 400
