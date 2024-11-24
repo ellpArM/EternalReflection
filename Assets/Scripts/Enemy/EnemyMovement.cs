@@ -17,6 +17,7 @@ public class EnemyMovement : MonoBehaviour
     public bool moveable = true;
 
     private float moveTimer;
+    public bool demonKinger;
 
     [SerializeField] Animator anim;
 
@@ -29,6 +30,10 @@ public class EnemyMovement : MonoBehaviour
 
         // Initialize timer
         moveTimer = timeToMove;
+        if (demonKinger==true)
+        {
+            Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Enemy"), LayerMask.NameToLayer("Wall"), true);
+        }
     }
 
     void Update()

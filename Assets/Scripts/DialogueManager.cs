@@ -104,6 +104,7 @@ public class DialogueManager : MonoBehaviour
             dialogueText.text = "";
             pixelArtRenderer.sprite = null;
             backgroundPanel.SetActive(false);
+            pixelArtRenderer.gameObject.SetActive(false);
             Debug.Log("End of dialogue.");
             if(isStarter == false)
             {
