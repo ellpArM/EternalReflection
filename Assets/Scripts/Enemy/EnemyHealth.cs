@@ -9,7 +9,7 @@ public class EnemyHealth : MonoBehaviour
 
     [SerializeField] GameObject healthBar;
     [SerializeField] GameObject pic;
-    [SerializeField] Animator anim;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +22,7 @@ public class EnemyHealth : MonoBehaviour
         healthBar.transform.localScale = new Vector3(health / maxHealth, 1f, 1f);
         if (health <= 0)
         {
-            Destroy(gameObject);
+            StartCoroutine(wet());
         }
         pic.transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
 
@@ -35,5 +35,11 @@ public class EnemyHealth : MonoBehaviour
             health -= 10;
             Destroy(collision.gameObject);
         }
+    }
+
+    IEnumerator wet()
+    {
+        yield return new WaitForSeconds(2f);
+        Destroy(gameObject);
     }
 }

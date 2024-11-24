@@ -262,15 +262,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueText: {fileID: 3482179877672409261}
   backgroundPanel: {fileID: 2010516458085534899}
+  win: {fileID: 0}
+  loss: {fileID: 0}
   pixelArtRenderer: {fileID: 6249640108560289212}
   dialogueLines:
-  - Imagine Losing
-  - You Suck
-  - ':)
-
-'
+  - Player Defeated
+  - Initializing Reboot Sequence
   pixelArtSprites: []
   typingSpeed: 0.05
+  isStarter: 0
+  losing: 1
+  p: {fileID: 0}
+  e: {fileID: 0}
 --- !u!1 &6924010784080192235
 GameObject:
   m_ObjectHideFlags: 0
@@ -329,7 +332,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

@@ -18,6 +18,8 @@ public class EnemyMovement : MonoBehaviour
 
     private float moveTimer;
 
+    [SerializeField] Animator anim;
+
     void Start()
     {
         if (navMeshAgent == null)
@@ -55,6 +57,11 @@ public class EnemyMovement : MonoBehaviour
             StartCoroutine(recharge());
             PushPlayerAway();
             //this.GetComponent<Rigidbody2D>().AddRelativeForce(Vector3.down * dashSpeed);
+        }
+
+        if(this.GetComponent<EnemyHealth>().health <= 0)
+        {
+            anim.SetBool("Dead", true);
         }
 
         // Make sure Z-position is clamped

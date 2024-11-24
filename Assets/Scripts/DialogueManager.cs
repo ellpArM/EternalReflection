@@ -23,9 +23,11 @@ public class DialogueManager : MonoBehaviour
     private int currentLineIndex = 0; // Track the current line of dialogue.
     private bool isTyping = false; // Check if the text is currently being typed.
     public bool isStarter = false; // Check if the text is currently being typed.
+    public bool losing = false; // Check if the text is currently being typed.
 
     [SerializeField] GameObject p;
     [SerializeField] GameObject e;
+    [SerializeField] GameObject fade;
 
     void Start()
     {
@@ -51,13 +53,11 @@ public class DialogueManager : MonoBehaviour
         {
             if(p.GetComponent<PlayerHealth>().health == 0)
             {
-                Instantiate(loss, this.transform.parent.transform);
-                Destroy(gameObject);
+                StartCoroutine(wet(loss));
             }
             else if(e.GetComponent<EnemyHealth>().health == 0)
             {
-                Instantiate(win, this.transform.parent.transform);
-                Destroy(gameObject);
+                StartCoroutine(wet(win));
             }
             
         }
@@ -107,7 +107,12 @@ public class DialogueManager : MonoBehaviour
             Debug.Log("End of dialogue.");
             if(isStarter == false)
             {
-                NextScene();
+                if (losing == false)
+                { NextScene(); }
+                else
+                {
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+                }
             }
             else
             {
@@ -119,5 +124,11 @@ public class DialogueManager : MonoBehaviour
     public void NextScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+    IEnumerator wet(GameObject thing)
+    {
+        yield return new WaitForSeconds(2.5f);
+        Instantiate(thing, this.transform.parent.transform);
+        Destroy(gameObject);
     }
 }
