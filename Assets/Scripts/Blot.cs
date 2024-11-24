@@ -1,85 +1,48 @@
+using System.Collections;
 using UnityEngine;
-using System.IO.Ports;
-using System.Threading;
-using System;
+using UnityEngine.Networking;
 
-public class Blot : MonoBehaviour
+public class FlaskApiCaller : MonoBehaviour
 {
-    public string letter; // Letter to be written
-    private SerialPort serialPort;
-    private Thread serialThread;
-    private bool isRunning;
+    // URL of the Flask server (replace with your server's actual IP or domain)
+    private const string flaskUrl = "http://10.66.95.154:5050/send_command/";
 
-    void Start()
+    // Function to call the Flask API with a G-code command
+    public void SendCommand(string gCodeCommand)
     {
-        // Initialize SerialPort
-        serialPort = new SerialPort("/dev/tty.usbmodem101", 9600);
-        serialPort.ReadTimeout = 500; // Set read timeout for non-blocking
-
-        // Start the serial communication in a new thread
-        isRunning = true;
-        serialThread = new Thread(SerialThread);
-        serialThread.Start();
+        // Start the coroutine to send the request
+        StartCoroutine(SendCommandCoroutine(gCodeCommand));
     }
 
-    void Update()
+    private IEnumerator SendCommandCoroutine(string command)
     {
-        // Example of sending G-code commands
-        if (serialPort.IsOpen)
-        {
-            serialPort.WriteLine("M4 S0");
-            serialPort.WriteLine("G1 X0 Y0");
-            serialPort.WriteLine("G1 X5 Y10");
-            serialPort.WriteLine("G1 X10 Y0");
-            serialPort.WriteLine("G1 X2.5 Y5");
-            serialPort.WriteLine("G1 X7.5 Y5");
-        }
-    }
+        // Construct the full URL with the command
+        string requestUrl = flaskUrl + UnityWebRequest.EscapeURL(command);
 
-    void SerialThread()
-    {
-        try
+        // Create a GET request
+        using (UnityWebRequest request = UnityWebRequest.Get(requestUrl))
         {
-            // Open the serial port
-            serialPort.Open();
-            Debug.Log("Serial Port Opened");
+            // Send the request and wait for the response
+            yield return request.SendWebRequest();
 
-            // Read any available response
-            while (isRunning && serialPort.IsOpen)
+            // Check for errors
+            if (request.result == UnityWebRequest.Result.ConnectionError || 
+                request.result == UnityWebRequest.Result.ProtocolError)
             {
-                try
-                {
-                    string response = serialPort.ReadLine();
-                    Debug.Log(response); // Output the response from CNC
-                }
-                catch (TimeoutException)
-                {
-                    // Ignore timeouts and continue reading
-                }
+                Debug.LogError($"Error: {request.error}");
             }
-        }
-        catch (Exception e)
-        {
-            Debug.LogError("Error in Serial Communication: " + e.Message);
-        }
-        finally
-        {
-            // Close the serial port safely
-            if (serialPort.IsOpen)
+            else
             {
-                serialPort.Close();
-                Debug.Log("Serial Port Closed");
+                // Successfully received a response
+                Debug.Log($"Response: {request.downloadHandler.text}");
             }
         }
     }
 
-    void OnApplicationQuit()
+    // Example usage: Call this function on start to test the connection
+    private void Start()
     {
-        // Ensure the serial thread is stopped when the application quits
-        isRunning = false;
-        if (serialThread != null && serialThread.IsAlive)
-        {
-            serialThread.Join();
-        }
+        // Example: Send a test command when the script initializes
+        SendCommand("G0 X110 Y10"); // Replace with your desired G-code command
     }
 }
