@@ -5,7 +5,7 @@ using UnityEngine.Networking;
 public class FlaskApiCaller : MonoBehaviour
 {
     // URL of the Flask server (replace with your server's actual IP or domain)
-    private const string flaskUrl = "http://127.0.0.1:5050/send_command/";
+    private const string flaskUrl = "http://10.66.95.154:5050/send_command/";
 
     // Function to call the Flask API with a G-code command
     public void SendCommand(string gCodeCommand)
