@@ -28,6 +28,7 @@ public class BulletBehaviour : MonoBehaviour
             if (bounceCount == 1)
             {
                 spriteRenderer.color = Color.red;
+                gameObject.tag = "EnemyBullet";
             }
         }
     }

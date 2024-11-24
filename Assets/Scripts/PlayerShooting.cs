@@ -20,6 +20,7 @@ public class PlayerShooting : MonoBehaviour
         if (Input.GetMouseButtonDown(0) && cooldownTimer >= shootCooldown)
         {
             Shoot();
+            StartCoroutine(GameObject.FindGameObjectWithTag("Enemy").GetComponent<EnemyMovement>().dodge());
             cooldownTimer = 0f; // Reset the cooldown timer
         }
     }
