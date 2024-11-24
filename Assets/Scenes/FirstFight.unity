@@ -53519,7 +53519,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1409027635
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53554,6 +53554,7 @@ MonoBehaviour:
   cam: {fileID: 519420031}
   dashed: 0
   pic: {fileID: 949654888}
+  anim: {fileID: 949654891}
 --- !u!61 &1409027637
 BoxCollider2D:
   m_ObjectHideFlags: 0
