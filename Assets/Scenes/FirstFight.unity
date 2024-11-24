@@ -53603,6 +53603,7 @@ MonoBehaviour:
   dashed: 0
   pic: {fileID: 949654888}
   anim: {fileID: 949654891}
+  canDash: 0
 --- !u!61 &1409027637
 BoxCollider2D:
   m_ObjectHideFlags: 0
