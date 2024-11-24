@@ -266,8 +266,9 @@ MonoBehaviour:
   loss: {fileID: 0}
   pixelArtRenderer: {fileID: 6249640108560289212}
   dialogueLines:
-  - Golem Defeated
-  - 'Golem Core Obtained: Gain The Abiliy to Dash (Press Space to Dash)'
+  - Spider King Defeated
+  - 'Research Book Obtained: "Time Travel Test, It was discovered that if one travels
+    at a high enough speed they may travel back in time"'
   pixelArtSprites: []
   typingSpeed: 0.05
   isStarter: 0
