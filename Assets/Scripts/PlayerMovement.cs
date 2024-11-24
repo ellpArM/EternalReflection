@@ -13,6 +13,9 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 mousePos;   // Mouse position in world space
     public bool dashed;
 
+    [SerializeField] GameObject pic;
+    [SerializeField] Animator anim;
+
     void Update()
     {
         // Get movement input (WASD or arrow keys)
@@ -22,6 +25,10 @@ public class PlayerMovement : MonoBehaviour
         // Get mouse position in world space
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
         //cam.gameObject.transform.position = new Vector3(transform.position.x, transform.position.y, -10f);
+        pic.transform.rotation = Quaternion.Euler( new Vector3(0, 0, 0));
+        anim.SetFloat("Horizontal", movement.x);
+        anim.SetFloat("Vertical", 0);
+        if (movement.x == 0) { anim.SetFloat("Vertical", movement.y); }
     }
 
     void FixedUpdate()
