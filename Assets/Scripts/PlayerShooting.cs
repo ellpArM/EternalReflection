@@ -11,6 +11,8 @@ public class PlayerShooting : MonoBehaviour
 
     private float cooldownTimer = 0f; // Tracks time since the last shot
 
+    [SerializeField] AudioSource pew;
+
     void Update()
     {
         // Update the cooldown timer
@@ -29,5 +31,6 @@ public class PlayerShooting : MonoBehaviour
     {
         // Spawn the bullet at the fire point's position and rotation
         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation, bulletparent.transform);
+        pew.Play();
     }
 }

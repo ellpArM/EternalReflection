@@ -17,6 +17,7 @@ public class EnemyMovement : MonoBehaviour
     public bool moveable = true;
 
     private float moveTimer;
+    private float freezeTimer;
     public bool demonKinger;
 
     [SerializeField] Animator anim;
@@ -71,6 +72,11 @@ public class EnemyMovement : MonoBehaviour
 
         // Make sure Z-position is clamped
         ClampZPosition();
+        if(Time.time - freezeTimer > 2f)
+        {
+            this.gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+            freezeTimer = Time.time;
+        }
     }
 
     void PushPlayerAway()
@@ -88,6 +94,8 @@ public class EnemyMovement : MonoBehaviour
         Vector2 lookDir = player.position - transform.position;
         float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;
         transform.rotation = Quaternion.Euler(0f, 0f, angle);
+
+        
     }
     void MoveAwayFromPlayer()
     {
