@@ -61384,7 +61384,7 @@ MonoBehaviour:
   moveRangeY: 5
   timeToMove: 0.6
   minDistanceToPlayer: 3
-  dashSpeed: 200
+  dashSpeed: 275
   moveable: 1
   demonKinger: 1
   anim: {fileID: 151200736}

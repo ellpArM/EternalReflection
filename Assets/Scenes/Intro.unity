@@ -297,7 +297,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3706735450467582804, guid: c57bd296930c9a843b59d87996d6f5e5, type: 3}
       propertyPath: dialogueLines.Array.data[0]
-      value: WAKEY WAKEY HONEY BUNS!
+      value: WAKEY WAKEY HONEY BUNS! (Press Space to Continue)
       objectReference: {fileID: 0}
     - target: {fileID: 3706735450467582804, guid: c57bd296930c9a843b59d87996d6f5e5, type: 3}
       propertyPath: dialogueLines.Array.data[1]
